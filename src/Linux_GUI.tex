@@ -1,0 +1,145 @@
+\documentclass[a4paper,12pt,twoside,openright,titlepage]{book}
+
+%Additional packages
+\usepackage[ascii]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[dutch,english]{babel}
+\usepackage{imakeidx}
+\usepackage{syntonly}
+\usepackage[official]{eurosym}
+%\usepackage[graphicx]
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+\usepackage{float}
+\usepackage{xurl}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, linkcolor=blue, citecolor=blue, filecolor=blue, urlcolor=blue, pdftitle=, pdfauthor=, pdfsubject=, pdfkeywords=}
+\usepackage{tabularx}
+\usepackage{scrextend}
+\addtokomafont{labelinglabel}{\sffamily}
+\usepackage{listings}
+\usepackage{adjustbox}
+\usepackage{color}
+
+% Define colors
+\definecolor{ashgrey}{rgb}{0.7, 0.75, 0.71}
+
+% Listing style
+\lstset{
+  backgroundcolor=\color{ashgrey},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}; should come as last argument
+  basicstyle=\footnotesize,        % the size of the fonts that are used for the code
+  breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
+  breaklines=true,                 % sets automatic line breaking
+  extendedchars=true,              % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
+  frame=single,	                   % adds a frame around the code
+  keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
+  rulecolor=\color{black},         % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
+  showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
+}
+
+% Uncomment for production
+% \syntaxonly
+
+% Style
+\pagestyle{headings}
+
+% Turn on indexing
+\makeindex[intoc]
+
+% Define document
+\author{D. Leeuw}
+\title{Linux de grafische interface}
+%\subtitle{Linux voor MBO niveau 4 en het LPI Linux Essentials examen}
+%\subject{Een Praktische Gids}
+\date{\today\\v.0.9.0}
+
+\begin{document}
+\selectlanguage{dutch}
+
+\maketitle
+
+\copyright\ 2020-2022 Dennis Leeuw\\
+
+\begin{figure}
+\includegraphics[width=0.3\textwidth]{linuxreader-img001.png}
+\end{figure}
+
+\bigskip
+
+\input{src/licentie}
+
+%%%%%%%%%%%%%%%%%%%
+%%% Introductie %%%
+%%%%%%%%%%%%%%%%%%%
+
+\frontmatter
+\chapter{Over dit Document}
+\input{src/OverDitDocument}
+\input{src/DocChanges}
+
+%%%%%%%%%%%%%%%%%
+%%% De inhoud %%%
+%%%%%%%%%%%%%%%%%
+\tableofcontents
+
+\mainmatter
+\chapter{Inleiding}
+\input{src/Inleiding_serie}
+
+\chapter{Werken met de Desktop}
+\input{src/GIWerkenMet}
+\section{Zoeken van bestanden of applicatie}
+\input{src/GIZoeken}
+\section{Systeem configuratie}
+\input{src/GISysConfig}
+\section{The Dash}
+\input{src/GIDash}
+\section{Bestandsbrowser}
+\input{src/filebrowser}
+
+\chapter{Installeren en updaten van software}
+\input{src/software}
+\section{Installeren van The GIMP}
+\input{src/GIInstallatieGIMP}
+\section{Show applications}
+\input{src/GI_CentOS_ShowApplications}
+
+\chapter{Internet}
+\section{Webbrowsers}
+\input{src/GIWebbrowsers}
+\section{E-mail clients}
+\input{src/GIEMailClients}
+
+\chapter{Office Applicaties}
+\section{Office pakketten}\index{Office pakketten}
+\input{src/GIOffice}
+\section{Grafische applicaties}
+\input{src/GIGrafischeApps}
+\subsection{The GIMP}\index{GIMP}\index{The GIMP}
+\input{src/GIGIMP}
+\subsection{Inkscape}\index{Inkscape}
+\input{src/GIInkscape}
+\section{Scribus}\index{Scribus}
+\input{src/GIScribus}
+
+\chapter{Multimedia}
+\input{src/multimedia}
+\section{Muziekspelers}\index{muziekspelers}
+\input{src/muziekspelers}
+\section{VLC}\index{VLC}\index{Video LAN Client}
+\input{src/vlc}
+\section{KODI}\index{KODI}
+\input{src/kodi}
+
+\chapter{Naar de command line}
+\section{Terminal}
+\input{src/GI_CentOS_Terminal}
+
+%%%%%%%%%%%%%%%%%%%%%
+%%% Index and End %%%
+%%%%%%%%%%%%%%%%%%%%%
+\backmatter
+\printindex
+\end{document}
+
+%%% Last line %%%
