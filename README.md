@@ -1,7 +1,6 @@
 # Linux
-Dit project heeft als doel om een compleet open source boek te maken over Linux voor het MBO en voor het examen van LPI Linux Essentials. De tekst is geschreven in LaTeX.
+Dit project heeft als doel om een compleet open source boek te maken over Linux voor het MBO en voor het examen van LPI Linux Essentials.
 
-Het leek me de meest logisch taal om een boek in te schrijven omdat dit ook door drukkers makkelijk verwerkt kan worden en er standaard tools zijn voor de conversie naar PDF wat voor studenten dan weer een goed toegankelijk formaat is.
 
 De reden om een open source boek te willen maken heeft te maken met een aantal redenen.
 * De eerste is de mogelijkheid om op deze manier gezamenlijk te werken aan een goed boek voor het MBO. Samen kunnen we meer en kunnen we beter materiaal maken dan een ieder alleen zou kunnen.
@@ -17,4 +16,6 @@ Het Linux boek bestaat uit losse delen en heeft 2 doelen. Doel 1 is de aansluiti
 
 
 ## PDF Conversie
+Het document is geschreven in LaTeX. Het leek me de meest logisch taal om een boek in te schrijven omdat dit ook door drukkers makkelijk verwerkt kan worden en er standaard tools zijn voor de conversie naar PDF wat voor studenten dan weer een goed toegankelijk formaat is.
+
 De conversie naar PDF doe ik met pdflatex
