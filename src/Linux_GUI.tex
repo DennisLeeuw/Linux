@@ -10,6 +10,7 @@
 %\usepackage[graphicx]
 \usepackage{graphicx}
 \graphicspath{ {./images/} }
+\usepackage{wrapfig}
 \usepackage{float}
 \usepackage{xurl}
 \usepackage{hyperref}
@@ -51,7 +52,7 @@
 \title{Linux de grafische interface}
 %\subtitle{Linux voor MBO niveau 4 en het LPI Linux Essentials examen}
 %\subject{Een Praktische Gids}
-\date{\today\\v.0.9.0}
+\date{\today\\v.1.0.0}
 
 \begin{document}
 \selectlanguage{dutch}
@@ -75,7 +76,7 @@
 \frontmatter
 \chapter{Over dit Document}
 \input{src/OverDitDocument}
-\input{src/DocChanges}
+\input{src/DocChanges_GUI}
 
 %%%%%%%%%%%%%%%%%
 %%% De inhoud %%%
@@ -85,10 +86,11 @@
 \mainmatter
 \chapter{Inleiding}
 \input{src/Inleiding_serie}
+\input{src/Inleiding_GUI}
 
 \chapter{Werken met de Desktop}
 \input{src/GIWerkenMet}
-\section{Zoeken van bestanden of applicatie}
+\section{Zoeken van bestanden of applicaties}
 \input{src/GIZoeken}
 \section{Systeem configuratie}
 \input{src/GISysConfig}
@@ -99,7 +101,7 @@
 
 \chapter{Installeren en updaten van software}
 \input{src/software}
-\section{Installeren van The GIMP}
+\section{Installeren van GIMP}
 \input{src/GIInstallatieGIMP}
 \section{Show applications}
 \input{src/GI_CentOS_ShowApplications}
