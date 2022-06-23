@@ -77,6 +77,11 @@ $ echo $PATH
 Dit levert een output op die er ongeveer zo uit ziet: /usr/local/bin:/usr/bin:/bin. Voor een gebruiker met dit PATH
 wordt er voor een commando eerst gezocht in /usr/local/bin, daarna in /usr/bin en als laatste in /bin/.
 
+Als we willen weten waar een commando vandaan komt, dan kunnen we \texttt{which} gebruiken:
+\begin{lstlisting}[language=bash]
+$ which ls
+\end{lstlisting}
+
 Met het commando su kan je een andere gebruiker worden (switch user). Type eens:
 \begin{lstlisting}[language=bash]
 $ su -
