@@ -26,15 +26,17 @@
 
 % Listing style
 \lstset{
-  backgroundcolor=\color{ashgrey},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}; should come as last argument
+  backgroundcolor=\color{ashgrey}, % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}; should come as last argument
   basicstyle=\footnotesize,        % the size of the fonts that are used for the code
-  breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
+  breakatwhitespace=true,          % sets if automatic breaks should only happen at whitespace
   breaklines=true,                 % sets automatic line breaking
   extendedchars=true,              % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
   frame=single,	                   % adds a frame around the code
-  keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
   rulecolor=\color{black},         % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
-  showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
+  keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
+  columns=fullflexible,		   % make copy and paste possible
+  showstringspaces=false,          % if true show spaces in strings adding particular underscores
+  showspaces=false,                % if true show spaces everywhere adding particular underscores; it does not override 'showstringspaces'
 }
 
 % Uncomment for production
@@ -109,14 +111,20 @@
 % Requires: ls
 % Provides: fhs, which
 \chapter{Het bestandssysteem}
-\section{Commando's}
+\section{Everything is a file}
+\input{src/EverytingIsAFile}
+\subsection{Bestandstypen}
+\section{FHS - Filesystem Hierarchy Standard}
+\input{src/FHS}
+
+% Requires: ls
+% Provides: which
+\chapter{Commando's}
 \input{src/Commandos}
 \section{Waar zijn de commando's?}
 \input{src/WaarZijnCommandos}
 \section{Error codes}
 \input{src/ErrorCodes}
-\section{FHS - Filesystem Hierarchy Standard}
-\input{src/FHS}
 
 % Requires: fhs
 % Provides: man, locate, info, apropos
@@ -134,7 +142,29 @@
 \input{src/DocInternet}
 
 % Requires: fhs
-% Provides: grep, find, globbing, regular expressions
+% Provides: touch, cat, mkdir, >, >>, <, <<, redirects
+\chapter{Werken met bestanden}
+\section{Directories}
+\section{Bestanden maken en stdin, stdout en stderr}
+\input{src/BestandenMaken}
+
+% Requires: fhs
+% Provides: vi, vim, nano, pico
+\chapter{Het gebruik van een editor}
+\input{src/editor}
+\section{vi, pico, nano}
+\input{src/editors}
+\section{vim}
+\input{src/vimIntro}
+\subsection{vim opstarten}
+\input{src/vimOpstarten}
+\input{src/vimTextInvoer}
+\input{src/vimDelete}
+\input{src/vimKnippenPlakken}
+\input{src/vimBewegen}
+
+% Requires: fhs, editor
+% Provides: grep, find, globbing, regular expressions, sed
 \chapter{Zoeken en vinden}\label{zoekenenvinden}
 \input{src/ZoekenVindenIntro}
 \section{Globbing}
@@ -143,12 +173,14 @@
 \input{src/find}
 \input{src/ZoekenNaarBestanden}
 \section{Zoeken in bestanden}
+\input{src/ZoekenInBestanden}
+\input{src/grep}
 \section{Regular Expressions}
+\section{Zoek en vervang}
 
 % Requires: fhs, ls, grep
 % Provides: users, groups, chown, adduser, deluser, usermod
 %           /etc/passwd, /etc/shadow, /etc/group, /etc/gshadow
-% Provides: chmod, access rights
 \chapter{Gebruikers, groepen en rechten}
 \input{src/gebruikersgroepenrechten}
 \section{Gebruikers en groepen}
@@ -160,34 +192,15 @@
 \input{src/sudo}
 \subsection{su}
 \input{src/su}
-\section{Toegangsrechten op bestanden en directories}
-\subsection{Bestandstypen}
-\subsection{read, write and execute}
-\subsection{Het 4de-bit}
 \section{User Personal Group}
 
-% Requires: fhs
-% Provides: vi, vim, nano, pico, >, >>, <, <<, redirects
-\chapter{Werken met bestanden}
-\section{Everything is a file}
-\subsection{Bestandstypen}
-\section{Directories}
-\section{Bestanden maken en stdin, stdout en stderr}
-\input{src/BestandenMaken}
-
-% New chapter?
-\section{Het gebruik van een editor}
-\input{src/editor}
-\subsection{vi, pico, nano}
-\input{src/editors}
-\subsection{vim}
-\input{src/vimIntro}
-\subsubsection{vim opstarten}
-\input{src/vimOpstarten}
-\input{src/vimTextInvoer}
-\input{src/vimDelete}
-\input{src/vimKnippenPlakken}
-\input{src/vimBewegen}
+% Requires: fhs, ls, grep
+% Provides: chmod, access rights
+\chapter{Toegangsrechten op bestanden en directories}
+\input{src/bestandsrechten}
+\section{Bestandstypen}
+\section{read, write and execute}
+\section{Het 4de-bit}
 
 % Requires: sudo, cat
 % Provides: lscpu, free, dmidecode, uname
