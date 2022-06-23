@@ -1,0 +1,30 @@
+Om een service te starten of te stoppen gebruikt \texttt{systemd} bestanden waarin beschreven wordt hoe een service heet en welke commando's er nodig zijn om te starten en stoppen. Deze beschrijving van een service wordt binnen \texttt{systemd} een \textbf{unit} genoemd. Units kan je onder andere terug vinden in de \texttt{/etc/systemd/system} directory. Een voorbeeld van een unit-file in Debian 11 is de \texttt{syslog.service}. Deze ziet er zo uit:
+
+\begin{lstlisting}[language=bash]
+[Unit]
+Description=System Logging Service
+Requires=syslog.socket
+Documentation=man:rsyslogd(8)
+Documentation=man:rsyslog.conf(5)
+Documentation=https://www.rsyslog.com/doc/
+
+[Service]
+Type=notify
+ExecStart=/usr/sbin/rsyslogd -n -iNONE
+StandardOutput=null
+Restart=on-failure
+
+# Increase the default a bit in order to allow many simultaneous
+# files to be monitored, we might need a lot of fds.
+LimitNOFILE=16384
+
+[Install]
+WantedBy=multi-user.target
+Alias=syslog.service
+\end{lstlisting}
+
+Als je een service hebt gewijzigd of toegevoegd moet je systemctl vertellen dat er iets nieuws is. Dat doe je met het volgende commando:
+\begin{lstlisting}[language=bash]
+$ sudo systemctl daemon-reload
+\end{lstlisting}
+
