@@ -53,7 +53,7 @@
 \title{Linux de Command Line Interface}
 %\subtitle{Linux voor MBO niveau 4 en het LPI Linux Essentials examen}
 %\subject{Een Praktische Gids}
-\date{\today\\v.0.2.0}
+\date{\today\\v.0.3.0}
 
 \begin{document}
 \selectlanguage{dutch}
@@ -109,15 +109,16 @@
 \input{src/VariabelenEigen}
 
 % Requires: ls
-% Provides: fhs, which
+% Provides: fhs, ps (short)
 \chapter{Het bestandssysteem}
 \section{Everything is a file}
-\input{src/EverytingIsAFile}
+\input{src/EverythingIsAFile}
 \subsection{Bestandstypen}
+\input{src/bestandstypen}
 \section{FHS - Filesystem Hierarchy Standard}
 \input{src/FHS}
 
-% Requires: ls
+% Requires: ls, fhs
 % Provides: which
 \chapter{Commando's}
 \input{src/Commandos}
@@ -142,11 +143,15 @@
 \input{src/DocInternet}
 
 % Requires: fhs
-% Provides: touch, cat, mkdir, >, >>, <, <<, redirects
+% Provides: touch, cat, mkdir, rmdir, >, >>, <, <<, redirects
 \chapter{Werken met bestanden}
+\input{src/Bestanden}
 \section{Directories}
+\input{src/Directories}
 \section{Bestanden maken en stdin, stdout en stderr}
 \input{src/BestandenMaken}
+\section{Bestanden kopie\"eren, verplaatsen, hernoemen, verwijderen}
+\input{src/Bestanden_verplaatsen}
 
 % Requires: fhs
 % Provides: vi, vim, nano, pico
