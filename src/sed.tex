@@ -1,0 +1,32 @@
+We kunnen ook regels zoeken in een bestand die aan een bepaald patroon (regex) voldoen en dan het patroon vervangen door iets anders. Een van de meest gebruikte tools daarvoor heet \texttt{sed}\index{sed}.
+
+\begin{lstlisting}[language=bash]
+$ ls -1
+$ ls | sed -e 's/aap/noot/'
+\end{lstlisting}
+overal waar aap stond staat nu noot. Op de disk is er niets gewijzigd, we hebben alleen de output van ls aangepast.
+
+Om iets meer van \texttt{sed} te leren gaan we eerst een bestand aanmaken:
+\begin{lstlisting}[language=bash]
+echo "In het land der blonde duinen
+En niet heel ver van de zee,
+Woonde eens een dwergenpaartje
+En dat heette "Piggelmee."
+
+'t Waren heel, heel kleine menschjes
+En ze woonden - vrees'lijk lot,
+Want ze hadden heel geen huisje -     
+In een ouden, keulschen pot." > piggelmee.txt
+\end{lstlisting}
+
+Hier zitten wat oud-Nederlandse woorden in. Die gaan we zoeken en ook vervangen. We beginnen met keulschen daar gaan we keulse van maken:
+\begin{lstlisting}[language=bash]
+$ sed -e 's/keulsche/keulse/'
+\end{lstlisting}
+Op het scherm zien we nu de verbeterde tekst, op disk staat echter nog de oude tekst. We kunnen de verbeterde tekst natuurlijk met het groter dan teken wegschrijven naar disk met een nieuwe bestandsnaam. Makkelijker is om de verbeterde tekst in het al bestaande bestand aan te passen:
+\begin{lstlisting}[language=bash]
+$ sed -ie 's/keulsche/keulse/'
+\end{lstlisting}
+We zien nu geen output, omdat de tekst op de disk gewijzigd is. Gebruik \texttt{cat} om te zien dat de tekst inderdaad gewijzigd is. Zoek in de man-page op wat de betekenis is van de -i en de -e opties.
+
+Hetzelfde kunnen we doen voor het woord menschjes. Vervang dit door het woord mensjes.
