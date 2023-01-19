@@ -186,23 +186,29 @@
 \input{src/sed}
 
 % Requires: fhs, ls, grep
-% Provides: users, groups, chown, adduser, deluser, usermod
+% Provides: users, groups, id, adduser, deluser, gpasswd, usermod
 %           /etc/passwd, /etc/shadow, /etc/group, /etc/gshadow
+% FIXME /etc/gshadow
 \chapter{Gebruikers, groepen en rechten}
 \input{src/gebruikersgroepenrechten}
 \section{Gebruikers en groepen}
 \input{src/gebruikers}
 \input{src/groepen}
+\input{src/upg}
 \section{Werken als root}
 \input{src/WerkenAlsroot}
 \subsection{sudo}
 \input{src/sudo}
 \subsection{su}
 \input{src/su}
-\section{User Personal Group}
+\section{Gebruikersbeheer}
+\input{src/adduser}
+\input{src/addgroup}
+\input{src/gpasswd}
+\input{src/usermod}
 
-% Requires: fhs, ls, grep
-% Provides: chmod, access rights
+% Requires: fhs, ls, grep, users, groups
+% Provides: chown, chmod, access rights
 \chapter{Toegangsrechten op bestanden en directories}
 \input{src/bestandsrechten}
 \section{Bestandstypen}

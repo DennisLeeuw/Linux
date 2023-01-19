@@ -6,7 +6,7 @@ De database met gebruikersnamen is een bestand dat staat in de \texttt{/etc} dir
 $ less /etc/passwd
 \end{lstlisting}
 
-De wachtwoorden staan in een ander bestand, dat heet \texttt{shadow}\index{shadow}. Ook dit bestand kan je me \texttt{less} niet bekijken, omdat alleen de beheerder (root) hier rechten voor heeft. De wachtwoorden zijn niet leesbaar, maar geencrypt, opgeslagen. Met het \texttt{passwd}-commando\index{passwd}\index{commando!passwd} kan je je wachtwoord wijzigen.
+De wachtwoorden staan in een ander bestand, dat heet \texttt{shadow}\index{shadow}. Dit bestand kan je met \texttt{less} niet bekijken, omdat alleen de beheerder (root) hier rechten voor heeft. De wachtwoorden zijn niet leesbaar, maar geencrypt, opgeslagen. Met het \texttt{passwd}-commando\index{passwd}\index{commando!passwd} kan je je wachtwoord wijzigen.
 
 Gebruik \texttt{grep}\index{grep} om je eigen gegevens uit \texttt{/etc/passwd}\index{/etc/passwd} te halen:
 \begin{lstlisting}[language=bash]
@@ -14,3 +14,24 @@ $ grep dennis /etc/passwd
 \end{lstlisting}
 vervang hierbij \textsl{dennis} door je eigen gebruikersnaam.
 
+De output van de vorige commando zal er ongeveer zo uit zien:
+\begin{lstlisting}[language=bash]
+dennis:x:1000:1000:Dennis Leeuw,,,:/home/dennis:/bin/bash
+\end{lstlisting}
+Het is een soort database waarin de verschillende elementen gescheiden zijn door een :.
+\begin{enumerate}
+	\item gebruikersnaam (login-naam)
+	\item werd vroeger gebruikt voor het wachtwoord, nu altijd een x. Wachtwoorden staan nu in het \texttt{shadow} bestand.
+	\item nummerieke ID van de gebruiker
+	\item nummerieke ID van de primaire groep van de gebruiker
+	\item extra informatie over de gebruiker, met komma's gescheiden. Heet ook wel het GECOS-field en kan dan de volgende informatie bevatten:
+		\begin{enumerate}
+			\item Volledige naam van de gebruiker
+			\item Adres gegevens van de gebruiker (gebouw en kamernummer)
+			\item Werk telefoonnummer
+			\item Thuis telefoonnummer
+			\item Overige contact informatie (fax, prive e-mail adres, pager, social media)
+		\end{enumerate}
+	\item de home-directory van de gebruiker
+	\item de shell die wordt opgestart als de gebruiker inlogt
+\end{enumerate}
