@@ -206,14 +206,22 @@
 \input{src/addgroup}
 \input{src/gpasswd}
 \input{src/usermod}
+%FIXME : Verwijderen gebruikers, groepen
 
 % Requires: fhs, ls, grep, users, groups
 % Provides: chown, chmod, access rights
 \chapter{Toegangsrechten op bestanden en directories}
 \input{src/bestandsrechten}
+\input{src/bestandsrechten_overzicht}
 \section{Bestandstypen}
+\section{src/bestandstypen}
+\section{De eigenaar}
+\input{src/chown}
 \section{read, write and execute}
+\input{src/rwx}
+\input{src/chmod}
 \section{Het 4de-bit}
+% FIXME : 4th bit
 
 % Requires: sudo, cat
 % Provides: lscpu, free, dmidecode, uname
