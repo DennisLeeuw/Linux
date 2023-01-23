@@ -7,26 +7,20 @@ $ ls | sed -e 's/aap/noot/'
 overal waar aap stond staat nu noot. Op de disk is er niets gewijzigd, we hebben alleen de output van ls aangepast.
 
 Om iets meer van \texttt{sed} te leren gaan we eerst een bestand aanmaken:
-\begin{lstlisting}[language=bash]
-echo "In het land der blonde duinen
-En niet heel ver van de zee,
-Woonde eens een dwergenpaartje
-En dat heette "Piggelmee."
+\lstinputlisting[language=bash]{data/stageverslag.txt}
 
-'t Waren heel, heel kleine menschjes
-En ze woonden - vrees'lijk lot,
-Want ze hadden heel geen huisje -     
-In een ouden, keulschen pot." > piggelmee.txt
-\end{lstlisting}
-
-Hier zitten wat oud-Nederlandse woorden in. Die gaan we zoeken en ook vervangen. We beginnen met keulschen daar gaan we keulse van maken:
+Hier zitten wat taal fouten in. Die gaan we zoeken en ook vervangen. We beginnen met het gebruik van Me aan het begin van de eerste twee alinea's. Dat moet natuurlijk Mijn zij.
 \begin{lstlisting}[language=bash]
-$ sed -e 's/keulsche/keulse/'
+$ sed -e 's/^Me/Mijn/'
 \end{lstlisting}
 Op het scherm zien we nu de verbeterde tekst, op disk staat echter nog de oude tekst. We kunnen de verbeterde tekst natuurlijk met het groter dan teken wegschrijven naar disk met een nieuwe bestandsnaam. Makkelijker is om de verbeterde tekst in het al bestaande bestand aan te passen:
 \begin{lstlisting}[language=bash]
-$ sed -ie 's/keulsche/keulse/'
+$ sed -ie 's/^Me/Mijn/'
 \end{lstlisting}
 We zien nu geen output, omdat de tekst op de disk gewijzigd is. Gebruik \texttt{cat} om te zien dat de tekst inderdaad gewijzigd is. Zoek in de man-page op wat de betekenis is van de -i en de -e opties.
 
-Hetzelfde kunnen we doen voor het woord menschjes. Vervang dit door het woord mensjes.
+Een ander 'me' die fout is is de 'me' voor 'me school' maar de 'me' voor 'me ontwikkelen' is bijvoorbeeld goed. We moeten dus een regular expression schrijven ide alleen matched op 'me school':
+\begin{lstlisting}[language=bash]
+$ sed -ie 's/me\ school.$/mijn\ school/'
+\end{lstlisting}
+Let op de $\backslash$ voor de spatie. Een spatie is in de shell een scheidingsteken en dat willen we nu niet. We bedoelen een echte spatie, dus moeten we hem escapen.
