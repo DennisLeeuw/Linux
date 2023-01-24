@@ -206,7 +206,8 @@
 \input{src/addgroup}
 \input{src/gpasswd}
 \input{src/usermod}
-%FIXME : Verwijderen gebruikers, groepen
+\input{src/delgroup}
+\input{src/deluser}
 
 % Requires: fhs, ls, grep, users, groups
 % Provides: chown, chmod, access rights
@@ -221,7 +222,13 @@
 \input{src/rwx}
 \input{src/chmod}
 \section{Het 4de-bit}
-% FIXME : 4th bit
+\input{src/4th-bit}
+\subsection{SUID-bit}
+\input{src/suidbit}
+\subsection{SGID-bit}
+\input{src/sgidbit}
+\subsection{Sticky-bit}
+\input{src/stickybit}
 
 % Requires: sudo, cat
 % Provides: lscpu, free, dmidecode, uname
