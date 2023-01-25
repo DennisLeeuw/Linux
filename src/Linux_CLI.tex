@@ -298,10 +298,42 @@
 \section{Mounten van disks}
 \input{src/MountenDisks}
 
+% Requires: IP kennis
+% Provides: Network, ip, /etc/resolv.conf, /etc/hostname
+%	    host, hostnamectl, ping, ifconfig, route
 \chapter{Netwerk configuratie}
+\input{src/Netwerk_intro}
+\section{Wijzigen van de hostname}
+\input{src/hostnamectl}
+\section{Handmatige IP configuratie}
+\input{src/ip-show}
+\input{src/ifconfig}
+\input{src/route}
+\input{src/ip-ip-add-remove}
+\input{src/ip-route-add-remove}
+\section{DNS configuratie}
+\input{src/resolvconf}
+%\input{src/hosts}
+%\section{System IP configuratie}
+%\subsection{Debian based}
+%\subsection{Red Hat based}
 
+% Requires: network
+% Provides: Installing software
+%           From repo
+%           Adding repo's
+%	    Local
+%           AppImage
 \chapter{Software installeren}
+\section{The package manager}
+% deb of rpm
+\section{Repositories}
+\subsection{Adding repositories}
+\section{Packages from Internet}
+\subsection{AppImage}
 
+% Requires: software installation
+% Provides: Programming languages
 \chapter{Programmeertalen}
 \input{src/Programmeertalen}
 \input{src/Programming_Proc-OOP.tex}
