@@ -1,0 +1,12 @@
+Zoals je waarschijnlijk weet heeft een computer een ook aan naam, de zogenaamde hostname. Daarnaast hebben systemen op een IP netwerk ook een domainname. Net als www.google.com, daar is google.com de domainname en www een verwijzing naar een dienst of machine. De totale naam www.google.com noemen we de Fully Qualified Domain Name\index{Fully Qualified Domain Name} of afgekort FQDN\index{fqdn}.
+
+Met het commando \texttt{hostname}\index{hostname} kan je de naam van je machine opvragen en met \texttt{domainname}\index{domainname} het domain waartoe de machine behoort. Kijk niet vreemd op als daar (none) staat.
+
+Veel machines gebruiken DHCP om hun IP configuratie te krijgen, de hostname en de domainname kunnen ook door DHCP gezet werden. Wij gaan kijken hoe we handmatig de hostname kunnen wijzigen.
+
+De naam van de machine wordt opgeslagen in \texttt{/etc/hostname}\index{/etc/hostname} de nette manier om de naam van je machine te wijzigen is met \texttt{hostnamectl}\index{hostnamectl}\index{commando!hostnamectl}, vervang in het onderstaande voorbeeld \textbf{NEW\_HOSTNAME} door de gewenste machine naam.
+\begin{lstlisting}
+$ sudo hostnamectl set-hostname NEW_HOSTNAME
+\end{lstlisting}
+De naam in \texttt{/etc/hostname} is nu gewijzigd en ook het \texttt{hostname} commando zal nu de nieuwe naam als output hebben.
+
