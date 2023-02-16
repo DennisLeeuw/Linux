@@ -58,7 +58,7 @@
 
 \maketitle
 
-\copyright\ 2021-2022 Dennis Leeuw\\
+\copyright\ 2021-2023 Dennis Leeuw\\
 
 \begin{figure}
 \includegraphics[width=0.3\textwidth]{CC-BY-SA-NC.png}
@@ -94,20 +94,53 @@
 \input{src/daemons.tex}
 \section{init en systemd}
 \input{src/proc1.tex}
-\section{Logging}
-\subsection{journalctl}
-\input{src/journalctl}
-\subsection{syslog}
-\subsection{Log rotation}
 \section{Je eigen startup script}
 \input{src/systemd_unit}
 
+% requires: tail
+\chapter{Logging}
+\input{src/logging_intro}
+% provides: logrotate
+\section{Log rotation}\label{sec:logrotate}
+\input{src/logrotate}
+% provides: syslog, systemd-journald
+\section{syslog}\label{sec:syslog}
+\input{src/syslog}
+	% FIXME rsyslog
+\input{src/rsyslog}
+% requires: logrotate systemd-journald
+\section{journalctl}\label{sec:journalctl}
+\input{src/journalctl}
+
+\chapter{Monitoring services}
+\input{src/service_monitoring}
+\section{Proces monitoring}
+\input{src/proces_monitoring}
+\section{Daemons en netwerken}
+\input{src/daemons_network}
+
+\chapter{Printing}
+\input{src/printing}
+\section{CUPS}
+\input{src/cups}
+
+%\chapter{udev}
+
+\chapter{Wireless}
+
+\chapter{SMARTd}
+
+\chapter{Remote management}
+% alleen vanaf het management netwerk
+\section{SSH}
+\section{Ansible}
+\section{Puppet}
+\section{SaltStack}
+
+%%%%%%%%%% Nieuw document hierna %%%%%%%%%%%%%%%
+
 \chapter{Linux in een Windows Domain}
 \section{SaMBa}
-
-\chapter{Remote access}
-%alleen vanaf het management netwerk
-\section{SSH}
 
 \chapter{Mailserver}
 \section{postfix}
