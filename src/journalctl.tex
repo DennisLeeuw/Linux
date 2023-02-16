@@ -1,0 +1,10 @@
+\texttt{systemd}\index{systemd} is het eerste proces (daemon) dat opgestart wordt op een Linux systeem. Het is daarmee de moeder van alle processen. Als er een daemon opgestart moet worden dan wordt dat gedaan via \texttt{systemd}. \texttt{systemd} is dus de plek waar ook in de gaten gehouden kan worden wat er opgestart is en wat niet en daarmee kan \texttt{systemd} een bijzondere inkijk geven in de status van een systeem. Om meer inzicht te krijgen in wat \texttt{systemd} allemaal voorbij heeft zien komen is er een tool met de naam \texttt{journalctl}\index{journalctl}.
+
+Het opstarten van \texttt{journalctl} zonder enige opties of argumenten laat zien wat \texttt{systemd} heeft verzameld sinds het opstarten van het systeem, of sinds de laatste logrotate.
+
+Om alleen de berichten te zien van een specifiek proces kunnen we het volgende commando gebruiken:
+\begin{lstlisting}[language=bash]
+$ sudo journalctl -f -u systemd-journald
+\end{lstlisting}
+De \texttt{-f} optie doet hetzelfde als bij \texttt{tail}, het zegt dat de log gevolgd (follow) moet worden. Met \texttt{-u} geef je op welke 'unit' er gemonitord moet worden.
+
