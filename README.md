@@ -8,11 +8,15 @@ De reden om een open source boek te willen maken heeft te maken met een aantal r
 * De derde reden is dat het onderwijs op deze manier goedkoper wordt, de studenten hoeven het boek niet meer te kopen en zo wordt onderwijs toegankelijker voor meer mensen.
 * De vierde reden is dat we sneller nieuwe technieken kunnen toevoegen. Gezamenlijk kunnen we zorgen dat fouten en vernieuwingen niet hoeven te wachten totdat voorraden bij uitgevers zijn uitverkocht, we kunnen een nieuwe versie maken als dat nodig is.
 
-Het Linux boek bestaat uit losse delen en heeft 2 doelen. Doel 1 is de aansluiting op het MBO en doel 2 is om gebruikt te kunnen worden als leermiddel voor het LPI Linux Essentials examen. De delen zijn beschikbaar:
+Het Linux boek bestaat uit losse delen en heeft 2 doelen. Doel 1 is de aansluiting op het MBO en doel 2 is om gebruikt te kunnen worden als leermiddel voor het LPI Linux Essentials examen. Deze delen zijn beschikbaar:
 * Introductie - Wat is Linux en het hoe en waarom van open source. Het behandelt tevens de installatie van Linux in VirtualBox. Dit deel is belangrijk voor het LPI Linux Essentials examen.
 * GUI - behandelt het gebruik van de GUI. Dit deel is belangrijk voor het LPI Linux Essentials examen.
 * CLI - behandelt de CLI. Dit deel is belangrijk voor het LPI Linux Essentials examen.
+
+---- De hieronder volgende delen zijn niet noodzakelijk voor het LPI Linux Essentials examen.
+
 * Server - behandelt het gebruik van Linux als server systeem. Dit deel is voor de LPI Linux Essentials examen minder van belang, maar is nodig voor de aansluiting op het MBO examen zoals dat aangeboden wordt door Stichting Praktijkleren.
+* Icinga installatie - Icinga installatie handleiding
 
 
 ## PDF Conversie
