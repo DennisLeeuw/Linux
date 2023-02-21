@@ -22,8 +22,8 @@ Het is een soort database waarin de verschillende elementen gescheiden zijn door
 \begin{enumerate}
 	\item gebruikersnaam (login-naam)
 	\item werd vroeger gebruikt voor het wachtwoord, nu altijd een x. Wachtwoorden staan nu in het \texttt{shadow} bestand.
-	\item nummerieke ID van de gebruiker
-	\item nummerieke ID van de primaire groep van de gebruiker
+	\item nummerieke ID van de gebruiker (UID: User ID). De UID's 0-999 zijn gereserveerd voor het systeem en 1000 en hoger zijn vrij te gebruiken voor gebruikers. Het root-account heet altijd UID 0.
+	\item nummerieke ID van de primaire groep van de gebruiker (GID: Group ID). De GID's 0-999 zijn gereserveerd voor het systeem.
 	\item extra informatie over de gebruiker, met komma's gescheiden. Heet ook wel het GECOS-field en kan dan de volgende informatie bevatten:
 		\begin{enumerate}
 			\item Volledige naam van de gebruiker
