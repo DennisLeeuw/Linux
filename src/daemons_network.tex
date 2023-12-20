@@ -22,18 +22,18 @@ Je ziet dat voor beide commando's de opties identiek zijn.
 
 Tot slot van het bekijken van de luisterende poorten willen we ook kunnen zien welk proces (welke daemon) de poort gebruikt. Dit kan alleen root zien, dus moeten we sudo gebruiken:
 \begin{lstlisting}[language=bash]
-$ netstat -tulp
+$ sudo netstat -tulp
 \end{lstlisting}
 \begin{lstlisting}[language=bash]
-$ ss -tulp
+$ sudo ss -tulp
 \end{lstlisting}
 
 Beide commando's kunnen ook gebruikt worden om te zien welke verbindingen er nu open staan met je computer:
 \begin{lstlisting}[language=bash]
-$ netstat -tuanp | grep -vE 'LISTEN|:\*'
+$ sudo netstat -tuanp | grep -vE 'LISTEN|:\*'
 \end{lstlisting}
 \begin{lstlisting}[language=bash]
-$ ss -tu -o state connected
+$ sudo ss -tu -o state connected
 \end{lstlisting}
 Gebruik de man-page van de verschillende commando's om te zien wat de opties betekenen.
 
