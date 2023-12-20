@@ -12,7 +12,7 @@ De basis van regular expressions is een aantal karakters met een speciale beteke
 \hline
 * & Herhaal de voorgaande expressie 0 of meer keren \\
 \hline
-$\textasciicircum$ & Begin van de regel \\
+\textasciicircum & Begin van de regel \\
 \hline
 \$ & Einde van de regel \\
 \hline
@@ -39,7 +39,7 @@ merk op dat het verschil in output van de twee \texttt{ls} commando's zit in het
 $ ls | grep $\textasciicircum$a
 $ ls | grep a$
 \end{lstlisting}
-Met het $\textasciicircum$ zoeken we vanaf het begin van de regel, dus de regel moet beginnen met een a. Met de \$ zoeken we vanaf het einde, dus de regel moet eindigen met een a.
+Met het \textasciicircum zoeken we vanaf het begin van de regel, dus de regel moet beginnen met een a. Met de \$ zoeken we vanaf het einde, dus de regel moet eindigen met een a.
 
 Als we willen bestanden willen zien die op .txt eindigen dan willen dat de punt onderdeel is van onze zoek opdracht en willen we niet dat de punt gezien wordt als een willekeurig karakter. Vergelijk de volgende twee commando's en hun uitkomst:
 \begin{lstlisting}[language=bash]
