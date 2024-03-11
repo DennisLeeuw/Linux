@@ -18,7 +18,7 @@
 % Define document
 \author{D. Leeuw}
 \title{Linux: Command Line Interface}
-\date{\today\\v.0.9.3}
+\date{\today\\v.0.9.4}
 
 \begin{document}
 \selectlanguage{dutch}
@@ -82,13 +82,17 @@
 \input{src/FHS}
 
 % Requires: ls, fhs
-% Provides: which
+% Provides: which, |, ;, &&, ||, |, xargs
 \chapter{Commando's}
 \input{src/Commandos}
 \section{Waar zijn de commando's?}
 \input{src/WaarZijnCommandos}
 \section{Error codes}
 \input{src/ErrorCodes}
+\section{Samenstellingen}
+\input{src/commando_samenstellingen}
+\section{xargs}
+\input{src/xargs}
 
 % Requires: fhs
 % Provides: man, locate, info, apropos
