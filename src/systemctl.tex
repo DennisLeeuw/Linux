@@ -35,3 +35,12 @@ sudo systemctl start systemd-timesyncd
 
 Probeer nu zelf de herstart en reload functies uit. Wat neem je waar?
 
+Om te weten wat \texttt{systemctl} allemaal geladen heeft is er het commando:
+\begin{lstlisting}[language=bash]
+sudo systemctl list-units
+\end{lstlisting}
+Hiermee kan je zien wat er allemaal gedaan is door systemd en met \texttt{grep} kan je daar de services uit halen die op dit moment actief zijn:
+\begin{lstlisting}[language=bash]
+sudo systemctl list-units | grep \.service.*running
+\end{lstlisting}
+
