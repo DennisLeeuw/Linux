@@ -13,10 +13,7 @@ Het Linux boek bestaat uit losse delen en heeft 2 doelen. Doel 1 is de aansluiti
 * GUI - behandelt het gebruik van de GUI. Dit deel is belangrijk voor het LPI Linux Essentials examen.
 * CLI - behandelt de CLI. Dit deel is belangrijk voor het LPI Linux Essentials examen.
 
---- De hieronder volgende delen zijn niet noodzakelijk voor het LPI Linux Essentials examen.
-
-* Server - behandelt het gebruik van Linux als server systeem. Dit deel is voor de LPI Linux Essentials examen minder van belang, maar is nodig voor de aansluiting op het MBO examen zoals dat aangeboden wordt door Stichting Praktijkleren.
-* Icinga installatie - Icinga installatie handleiding
+--- De overige delen zijn niet noodzakelijk voor het LPI Linux Essentials examen. Deze losse documenten helpen bij het verder verdiepen in de stof, of zijn nodig voor bepaalde examen onderdelen, of voor enkele losse lessen. Veel van deze documenten zijn nog in ontwikkeling.
 
 
 ## PDF Conversie
