@@ -4,16 +4,16 @@ We kunnen ook regels zoeken in een bestand die aan een bepaald patroon (regex) v
 $ ls -1
 $ ls | sed -e 's/aap/noot/'
 \end{lstlisting}
-overal waar aap stond staat nu noot. Op de disk is er niets gewijzigd, we hebben alleen de output van ls aangepast.
+overal waar aap stond staat nu noot. Op de disk is er niets gewijzigd, we hebben alleen de output van ls aangepast. We hebben de \textquote{taak} voor \texttt{sed} tussen ticks gezet omdat we zeker willen weten dat deze opdracht bij \texttt{sed} terecht komt en dat niet de shell zich ermee gaat bemoeien.
 
-Om iets meer van \texttt{sed} te leren gaan we eerst een bestand aanmaken:
+Om iets meer van \texttt{sed} te leren gaan we eerst een bestand aanmaken. Gebruik hiervoor \texttt{vi}, \texttt{vim} of een andere editor.
 \lstinputlisting[language=bash]{data/stageverslag.txt}
 
-Hier zitten wat taal fouten in. Die gaan we zoeken en ook vervangen. We beginnen met het gebruik van Me aan het begin van de eerste twee alinea's. Dat moet natuurlijk Mijn zij.
+In deze tekst zitten wat taalfouten. Die gaan we zoeken en vervangen. We beginnen met het gebruik van Me aan het begin van de eerste twee alinea's. Dat moet natuurlijk Mijn zijn.
 \begin{lstlisting}[language=bash]
 $ sed -e 's/^Me/Mijn/'
 \end{lstlisting}
-Op het scherm zien we nu de verbeterde tekst, op disk staat echter nog de oude tekst. We kunnen de verbeterde tekst natuurlijk met het groter dan teken wegschrijven naar disk met een nieuwe bestandsnaam. Makkelijker is om de verbeterde tekst in het al bestaande bestand aan te passen:
+Op het scherm zien we de verbeterde tekst, op disk staat echter nog de oude tekst. We kunnen de verbeterde tekst natuurlijk met het groter dan teken wegschrijven naar disk met een nieuwe bestandsnaam. Makkelijker is het om de verbeterde tekst in het al bestaande bestand aan te passen:
 \begin{lstlisting}[language=bash]
 $ sed -ie 's/^Me/Mijn/'
 \end{lstlisting}
