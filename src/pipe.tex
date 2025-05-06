@@ -1,0 +1,8 @@
+Op het Linux systeem hebben we vele kleine commando's die \'e\'en ding goed doen, door de data van het ene commando door te geven aan het andere commando kunnen we complexe dingen doen. Data doorgeven van het ene commando aan het andere doen we met het pipe-character\index{pipe}. Op je toetsenbord is dat het | teken.
+
+\begin{lstlisting}[language=bash]
+$ cal 10 2025
+$ cal 10 2025 | tr A-Z a-z
+\end{lstlisting}
+Probeer beide commando's uit en zie dat bij de tweede variant alle hoofdletters zijn vervangen door kleine letters. De output van het \texttt{cal}\index{cal}\index{commando!cal} commando is aangenomen door het \texttt{tr}\index{tr}\index{commando!tr} (translate) commando en die heeft de reeks A-Z vervangen door a-z. Dus elke A is een a geworden, elke B een b, etc.
+ 
