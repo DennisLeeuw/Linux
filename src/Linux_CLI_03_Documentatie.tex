@@ -1,0 +1,75 @@
+\documentclass[a4paper,12pt,twoside,openright,titlepage]{book}
+
+%Additional packages
+\input{styles/packages}
+
+% Listing style
+\input{styles/lstset}
+
+% Uncomment for production
+% \syntaxonly
+
+% Style
+\pagestyle{headings}
+
+% Turn on indexing
+\makeindex[intoc]
+
+% Define document
+\author{D. Leeuw}
+\title{Linux: Systeemdocumentatie}
+\date{\today\\v.1.0.0}
+
+\begin{document}
+\selectlanguage{dutch}
+
+\maketitle
+
+\copyright\ 2020-2025 Dennis Leeuw\\
+
+\input{styles/licentie}
+
+%%%%%%%%%%%%%%%%%%%
+%%% Introductie %%%
+%%%%%%%%%%%%%%%%%%%
+
+\frontmatter
+\chapter{Over dit Document}
+\section{Leerdoelen}
+\input{src/leerdoelen_cli_documentatie}
+\section{Voorkennis}
+\input{src/voorkennis_cli_documentatie}
+
+%%%%%%%%%%%%%%%%%
+%%% De inhoud %%%
+%%%%%%%%%%%%%%%%%
+\tableofcontents
+
+\mainmatter
+% Requires: shell
+% Provides: man, locate, info, apropos, whatis
+\chapter{Linux documentatie}
+\input{src/DocIntro}
+\chapter{man-pages}
+\input{src/DocMan}
+\chapter{Welk commando moet ik hebben?}
+\input{src/DocVinden}
+\chapter{De opties -h en -{}-help}
+\input{src/DocHelp}
+\chapter{Info}
+\input{src/DocInfo}
+\chapter{/usr/share/doc}
+\input{src/DocShareDoc}
+\chapter{Internet}
+\input{src/DocInternet}
+\chapter{Opdrachten}
+\input{src/vragen-documentatie}
+
+%%%%%%%%%%%%%%%%%%%%%
+%%% Index and End %%%
+%%%%%%%%%%%%%%%%%%%%%
+\backmatter
+\printindex
+\end{document}
+
+%%% Last line %%%

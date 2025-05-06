@@ -1,0 +1,96 @@
+\documentclass[a4paper,12pt,twoside,openright,titlepage]{book}
+
+%Additional packages
+\input{styles/packages}
+
+% Listing style
+\input{styles/lstset}
+
+% Uncomment for production
+% \syntaxonly
+
+% Style
+\pagestyle{headings}
+
+% Turn on indexing
+\makeindex[intoc]
+
+% Define document
+\author{D. Leeuw}
+\title{Linux: Introductie tot de Command Line Interface}
+\date{\today\\v.1.0.0}
+
+\begin{document}
+\selectlanguage{dutch}
+
+\maketitle
+
+\copyright\ 2020-2025 Dennis Leeuw\\
+
+\input{styles/licentie}
+
+%%%%%%%%%%%%%%%%%%%
+%%% Introductie %%%
+%%%%%%%%%%%%%%%%%%%
+
+\frontmatter
+\chapter{Over dit Document}
+\section{Leerdoelen}
+\input{src/leerdoelen_cli_waarom_cli}
+\section{Voorkennis}
+\input{src/voorkennis_cli_waarom_cli}
+%\input{src/OverDitDocument}
+%\input{src/DocChanges_CLI}
+
+%%%%%%%%%%%%%%%%%
+%%% De inhoud %%%
+%%%%%%%%%%%%%%%%%
+\tableofcontents
+
+\mainmatter
+
+% Requires: GUI, DASH
+% Provides: ls, pwd, whoami, hostname, history, mkdir, cd, rmdir, ~
+% PATH, HOME, USER
+\chapter{Waarom de commandline interface?}
+\input{src/WaaromDeCLI}
+\chapter{Toegang tot de CLI}
+\input{src/CLIToegang}
+\chapter{De shell}
+\input{src/CLIShell}
+\section{De prompt}
+\input{src/CLIPrompt}
+\section{De home-directory}
+\input{src/HomeDirectory}
+\section{History}
+\input{src/CLIHistory}
+\section{Shell variabelen}
+\input{src/VariabelenShell}
+\section{Eigen variabelen}
+\input{src/VariabelenEigen}
+\section{Shell Quotes en Escapes}
+\input{src/quotesescapes}
+\subsection{Escapes}
+\input{src/escapes}
+\subsection{Quotes}
+\input{src/quotes}
+\section{Opdrachten}
+\input{src/vragen-shell}
+\chapter{Het bestandssysteem}
+\input{src/FHS}
+\section{Everything is a file}
+\input{src/EverythingIsAFile}
+\subsection{Bestandstypen}
+\input{src/bestandstypen}
+\section{Opdrachten}
+\input{src/vragen-fhs}
+
+
+%%%%%%%%%%%%%%%%%%%%%
+%%% Index and End %%%
+%%%%%%%%%%%%%%%%%%%%%
+\backmatter
+\printindex
+\end{document}
+
+%%% Last line %%%

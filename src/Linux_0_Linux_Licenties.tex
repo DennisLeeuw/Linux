@@ -1,0 +1,73 @@
+\documentclass[a4paper,12pt,twoside,openright,titlepage]{book}
+
+%Additional packages
+\input{styles/packages}
+
+% Listing style
+\input{styles/lstset}
+
+% Uncomment for production
+% \syntaxonly
+
+% Style
+\pagestyle{headings}
+
+% Turn on indexing
+\makeindex[intoc]
+
+% Define document
+\author{D. Leeuw}
+\title{Linux: Software Licenties}
+\date{\today\\v.1.1.2}
+
+\begin{document}
+\selectlanguage{dutch}
+
+\maketitle
+
+\copyright\ 2020-2025 Dennis Leeuw\\
+
+\input{styles/licentie}
+
+%%%%%%%%%%%%%%%%%%%
+%%% Introductie %%%
+%%%%%%%%%%%%%%%%%%%
+
+\frontmatter
+\chapter{Over dit Document}
+%\input{src/OverDitDocument}
+%\input{src/DocChanges_Intro}
+
+%%%%%%%%%%%%%%%%%
+%%% De inhoud %%%
+%%%%%%%%%%%%%%%%%
+\tableofcontents
+
+\mainmatter
+
+\chapter{Gebruiksrechten en licenties}
+\input{src/Licenties}
+\chapter{Gebruikslicenties}
+\section{MIT}
+\input{src/MIT}
+\section{BSD}
+\input{src/BSD}
+\section{GPL}
+\input{src/GPL}
+\chapter{Creative Commons}
+\input{src/CreativeCommons}
+\chapter{Open standaarden}
+\input{src/OpenStandaarden}
+\chapter{Open data}
+\input{src/OpenData}
+\chapter{Open Source Business Model}
+\input{src/OpenSourceBusinessModel}
+
+%%%%%%%%%%%%%%%%%%%%%
+%%% Index and End %%%
+%%%%%%%%%%%%%%%%%%%%%
+\backmatter
+\printindex
+\end{document}
+
+%%% Last line %%%
