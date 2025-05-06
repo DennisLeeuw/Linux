@@ -6,9 +6,9 @@ De output geeft weer dat je maar \'e\'en UID hebt en \'e\'en of meer GID's. Je k
 
 In de output zie je ook dat elk UID en elke GID eigenlijk een nummer is. Computers kunnen alleen met getallen werken, terwijl wij mensen beter met namen om kunnen gaan. Vandaar dat het besturingssysteem steeds een vertaling maakt van naam naar getal.
 
-Zoekt uit hoe je \texttt{id} alleen het nummerieke ID terug kunt laten geven en hoe alleen de naam van de primaire groep waarvan je lid bent.
+Zoek uit hoe je \texttt{id} alleen het nummerieke ID terug kunt laten geven en hoe je \texttt{id} alleen de naam van je primaire groep kan laten weergeven.
 
-De 'database' met groep informatie vind je in \texttt{/etc/group}. Je kan de naam van bijvoorbeeld je primaire groep terug vinden door een \texttt{grep} te doen op :GID:, dus in het voorgaande voorbeeld zou dat betekenen:
+De \textquote{database} met groep informatie vind je in \texttt{/etc/group}. Je kan de naam van bijvoorbeeld je primaire groep terug vinden door een \texttt{grep} te doen op :GID:, dus in het voorgaande voorbeeld zou dat betekenen:
 \begin{lstlisting}[language=bash]
 $ grep :1000: /etc/group
 \end{lstlisting}
