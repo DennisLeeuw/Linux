@@ -1,10 +1,10 @@
-Om de vraag te kunnen beantwoorden wat Linux is moeten we een stukje terug in de tijd en wel naar het eind van de jaren '60 uit de vorige eeuw. Een groepje programmeurs werkend aan een project genaamd Multics\index{Multics} bij Bell Labs van AT\&T zaten op een dood spoor of beter Bell Labs vond het een dood spoor en cancelde het project, dus schreef een van die programmeurs in ongeveer een maandtijd in 1969 een simpeler alternatief. De ontwikkelaar was Ken Thompson\index{Thompson, Ken} die samen met Dennis Ritchie\index{Ritche, Dennis} een team leidde.\par
+Om de vraag te kunnen beantwoorden wat Linux is moeten we een stukje terug in de tijd en wel naar het eind van de jaren '60 uit de vorige eeuw. Een groepje programmeurs werkend aan een project genaamd Multics\index{Multics} bij Bell Labs van AT\&T zaten op een dood spoor of beter Bell Labs vond het een dood spoor en cancelde het project, dus schreef een van die programmeurs in ongeveer een maand tijd in 1969 een simpeler alternatief. De ontwikkelaar was Ken Thompson\index{Thompson, Ken} die samen met Dennis Ritchie\index{Ritche, Dennis} een team leidde.\par
 
 Een ander lid van het team Brian Kernighan\index{Kernighan, Brian} schijnt met de naam Unics gekomen te zijn als woordgrap op Multics. Hoe de naam ooit \index{Unix}Unix is geworden is niet bekend.\par
 
 De gedachte achter Unix is ooit in 1979 mooi beschreven door Dennis Ritchie:
 \selectlanguage{english}
-What we wanted to preserve was not just a good environment in which to do programming, but a system around which a fellowship could form. We knew from experience that the essence of communal computing, as supplied by remote-access, time-shared machines, is not just to type programs into a terminal instead of a keypunch, but to encourage close communication.
+\textquote{What we wanted to preserve was not just a good environment in which to do programming, but a system around which a fellowship could form. We knew from experience that the essence of communal computing, as supplied by remote-access, time-shared machines, is not just to type programs into a terminal instead of a keypunch, but to encourage close communication.}
 \selectlanguage{dutch}
 Het ging dus om een systeem waarop samengewerkt kon worden en dan vooral geprogrammeerd.\par
 
@@ -14,32 +14,29 @@ en een eerste tekst editor en tekst formatter. Hieruit blijkt meteen de filosofi
 eerste tekst formatter heette roff\index{roff} en deze werd als snel opgevolgd door troff\index{troff}, die je nog steeds terug vindt op de
 systemen. De unix manual-pages\index{manual-pages}, waarover later meer, worden opgemaakt met behulp troff.\par
 
-De eerste versies van Unix waren geschreven in assembly, in 1974 kwam versie 4 uit die volledig herschreven was in de
-taal \index{C}C. Door het gebruik van C werd het mogelijk Unix ook op andere systemen te draaien dan het PDP systeem
-waar het voor geschreven was. Unix kon de wereld veroveren.\par
+De editor is inmiddels verschillende keren verbeterd, wat een ander voordeel is van dit \textquote{small is beautiful} principe. Je kan kleine stukjes aanpassen terwijl wat goed is behouden blijft.
 
-Bell Labs mocht door juridische afspraken geen commerci\"ele zaken ondernemen buiten de telefonie, daardoor werd de
-vraag naar Unix beantwoord door alleen geld te rekenen voor de media en het verzenden van het systeem, en niet voor het
+De eerste versies van Unix waren geschreven in assembly. Assembly is een programmeertaal die volledig toegespitst is op de onderliggende hardware. Iets dat in assembly geschreven is werkt dan ook alleen op \'e\'en type machine. In 1974 kwam Unix versie 4 uit die bijna volledig herschreven was in de
+taal \index{C}C. C is niet machine afhankelijk, er is een compiler nodig om de taal om te zetten naar de machine afhankelijke machinetaal. Door het gebruik van C werd het mogelijk Unix ook op andere systemen te draaien dan het PDP systeem
+waar het oorspronkelijk voor geschreven was. Unix kon de wereld gaan veroveren.\par
+
+Bell Labs mocht door juridische afspraken met de Amerikaanse overheid geen commerci\"ele zaken ondernemen buiten de telefonie, daardoor werd de
+vraag naar Unix beantwoord door alleen geld te rekenen voor de media (tapes) en het verzenden van het systeem, en niet voor het
 product zelf.\par
 
-Omdat het systeem goedkoop verkrijgbaar was was het een ideaal systeem voor universiteiten. Door studenten en andere
-gebruikers werden er in de loop van de tijd meer en meer programma's geschreven en ook anderen gingen collecties
-samenstellen die ze ook weer distribueerden. Deze collecties van programma's werden dan ook distributies genoemd. Een
-van de meest bekende van deze distributies is die van University of California die ontwikkeld werd door de Berkeley
-Computer Systems Research Group, de Berkeley Software Distribution\index{Berkeley Software Distribution} of afgekort \index{BSD}BSD.\par
+Omdat het systeem goedkoop verkrijgbaar was was het een ideaal systeem voor universiteiten. Studenten konden er relatief goedkoop op leren programmeren. Door studenten en andere
+gebruikers werden er in de loop van de tijd meer en meer programma's geschreven en verbeteringen gemaakt. Deze verbeterde stukken software werden met elkaar gedeeld. Van verkoop was nog geen sprake. Het voelde als hobby en leer projecten. Soms waren de wijzigingen zo groot dat er een variant van het oorspronkelijk Unix werd gedeeld (gedistribueerd). Deze collecties van programma's werden dan ook distributies genoemd. E\'en van de meest bekende van deze distributies is die van University of California die ontwikkeld werd door de Berkeley Computer Systems Research Group, de Berkeley Software Distribution\index{Berkeley Software Distribution} of afgekort \index{BSD}BSD.
 
-Een klein bedrijfje in de US was een van de eerste bedrijven die Unix naar de microcomputer, ofwel de PC, bracht. Hun
-Unix versie heette Xenix\index{Xenix} en het bedrijf stond bekend als Microsoft\index{Microsoft}. Grote bedrijven als IBM (AIX\index{AIX}) en HP
-(HPUX\index{HPUX}) hebben hun eigen unix versie voor grote machines.\par
+Een klein bedrijfje in de US was een van de eerste bedrijven die Unix naar de microcomputer, ofwel de PC, bracht. Tot dan draaide het eigenlijk alleen op grote servers. Hun Unix versie heette Xenix\index{Xenix} en het bedrijf stond bekend als Microsoft\index{Microsoft}. Grote bedrijven als IBM (AIX\index{AIX}) en HP (HPUX\index{HPUX}) hebben hun eigen Unix versie voor grote machines.
 
 De vele verschillende systemen die ontstonden waren voor de eindgebruikers een ramp. Wat op het ene systeem aanwezig was
 was op een andere niet aanwezig en omgekeerd. Een Unix-applicatie op de ene distributie werkte werkte niet zomaar ook
 op een andere. Gebruikers wilden standaardisatie. Software moest uitwisselbaar zijn. De standaard die ontstond in 1988
-is de \index{POSIX}POSIX standaard van de IEEE.\par
+is de \index{POSIX}POSIX standaard van de IEEE. Het beschrijft welke software minimaal aanwezig moet zijn en ook aan welke functionalitiet die software minimaal moet voldoen. Extra functionaliteit is dus geen probleem. Als een systeem aan de eisen van POSIX-standaard voldoet heet die dan ook POSIX-compliant.
 
 In 1983 bracht Richard Stallman\index{Stallman, Richard} een nieuw project in de wereld genaamd het \index{GNU}GNU Project, waarbij GNU staat
 voor GNU's not Unix! Dit om aan te geven dat het gebaseerd is op Unix maar geen Unix componenten bevat. GNU is een "from
-scratch" geschreven systeem dat volledig open source is. Dat wil zeggen dat van het hele systeem alle broncode
+scratch" geschreven systeem dat volledig open source is. From-scratch betekent dat alle code opnieuw geschreven is en Open Source wil zeggen dat van het hele systeem alle broncode openbaar
 beschikbaar is, hierdoor kan het gebruikt worden als studiemateriaal. Het heeft tevens het voordeel dat iedereen fouten
 uit de software kan halen en aan de software kan bijdragen om het beter te maken. Dit is dan ook altijd de strijd van
 Richard Stallman geweest en zijn daarvoor opgerichte organisatie The \index{Free Software Foundation}Free Software
@@ -54,7 +51,7 @@ gebruikersinterface en de hardware.\par
 In 1991 schreef een Finse student met de naam Linus Torvalds\index{Torvalds, Linus} een berichtje in een news-group dat hij bezig was met zo'n
 kernel. Niets groots zei hij, maar wel onder de GPL-licentie van de Free Software Foundation. Velen werden aangetrokken
 door dit project en gingen Linus helpen zijn kernel verder uit te breiden. Die kernel ging naar de maker heten en werd
-\index{Linux}Linux.\par
+\index{Linux}Linux genoemd.\par
 
 Linux is zoals gezegd een kernel; een abstractie laag tussen de hardware en de gebruikers interface. Voor een compleet systeem is er veel meer nodig. De overige software op wat wij nu een LInux systeem noemen is dan ook veelal afkomstig van het
 GNU-project. Fanatiekelingen willen dan ook graag dat je spreekt van GNU/Linux, maar de hele wereld
@@ -67,4 +64,6 @@ kwamen SuSE, Debian, Red Hat, CentOS, Ubuntu en nog vele vele anderen.\par
 Het meest gebruikte Unix desktop systeem is ongetwijfeld Darwin het open source besturingssysteem van Apple dat de basis
 vormt voor Mac OS X en op de telefoon is dat Android het systeem van Google dat een Linux kernel en andere open source
 tools onderwater gebruikt.\par
+
+En zo komen we na een lang verhaal aan het einde van deze simpele geschiedenis over Unix en Linux. Waarin hopelijk duidelijk is geworden waarom Linux Linux wordt genoemd, duidelijk is waarom Linux open source is en waarom delen zo'n belangrijk onderdeel is van de cultuur rond Unix en Linux systemen.
 
