@@ -4,7 +4,7 @@
 \input{styles/packages}
 
 % Listing style
-%\input{styles/lstset}
+\input{styles/lstset}
 
 % Uncomment for production
 % \syntaxonly
@@ -18,14 +18,14 @@
 % Define document
 \author{D. Leeuw}
 \title{Linux: Command Line Interface}
-\date{\today\\v.0.9.4}
+\date{\today\\v.0.9.5}
 
 \begin{document}
 \selectlanguage{dutch}
 
 \maketitle
 
-\copyright\ 2020-2023 Dennis Leeuw\\
+\copyright\ 2020-2025 Dennis Leeuw\\
 
 \input{styles/licentie}
 
@@ -70,6 +70,12 @@
 \input{src/VariabelenShell}
 \subsection{Eigen variabelen}
 \input{src/VariabelenEigen}
+\section{Shell Quotes en Escapes}
+\input{src/quotesescape}
+\subsection{Escapes}
+\input{src/quotes}
+\subsection{Quotes}
+\input{src/quotes}
 
 % Requires: ls
 % Provides: fhs, ps (short)
@@ -80,19 +86,6 @@
 \input{src/bestandstypen}
 \section{FHS - Filesystem Hierarchy Standard}
 \input{src/FHS}
-
-% Requires: ls, fhs
-% Provides: which, |, ;, &&, ||, |, xargs
-\chapter{Commando's}
-\input{src/Commandos}
-\section{Waar zijn de commando's?}
-\input{src/WaarZijnCommandos}
-\section{Error codes}
-\input{src/ErrorCodes}
-\section{Samenstellingen}
-\input{src/commando_samenstellingen}
-\section{xargs}
-\input{src/xargs}
 
 % Requires: fhs
 % Provides: man, locate, info, apropos
@@ -108,6 +101,21 @@
 \input{src/DocShareDoc}
 \section{Internet}
 \input{src/DocInternet}
+
+% Requires: ls, fhs, man
+% Provides: type, which, |, ;, &&, ||, |, xargs
+\chapter{Commando's}
+\input{src/command_syntax}
+\section{Waar zijn de commando's?}
+\input{src/WaarZijnCommandos}
+\section{Shell builtin commando's}
+\input{src/shell_builtin}
+\section{Error codes}
+\input{src/ErrorCodes}
+\section{Samenstellingen}
+\input{src/commando_samenstellingen}
+\section{xargs}
+\input{src/xargs}
 
 % Requires: fhs
 % Provides: touch, cat, mkdir, rmdir, >, >>, <, <<, redirects
