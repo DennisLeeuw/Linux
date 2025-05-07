@@ -15,7 +15,6 @@ Het \texttt{mv} commando kunnen we ook gebruiken om bestanden van naam te verand
 \begin{lstlisting}[language=bash]
 $ mv Hallo.txt hallo.txt
 \end{lstlisting}
-Veranderd de naam.
 
 Voor het weggooien van bestanden gebruiken we \texttt{rm} van remove.
 \begin{lstlisting}[language=bash]
@@ -30,3 +29,4 @@ geeft weer een foutmelding. Het systeem zegt tegen ons dat \texttt{Boom} een dir
 \begin{lstlisting}[language=bash]
 $ rm -r Boom
 \end{lstlisting}
+De \texttt{-r} optie verteld aan rm dat hij vanuit de diepste plek in de Boom directory moet beginnen met bestanden (en directories) weg te gooien net zo lang tot hij de directory Boom weg kan gooien. In ons voorbeeld is het niet veel dat \texttt{rm} te doen heeft, maar je zal niet de eerste zijn die met \texttt{-r} meer weggooid dan de bedoeling was en dat tot de ontdekking komt dat een Linux systeem geen undelete kent. Terug halen van data is er dan ook niet bij.
