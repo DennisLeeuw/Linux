@@ -15,23 +15,23 @@ De spaties zorgen ervoor dat de shell weet wanneer een volgend deel begint, voor
 Het commando ls laat een lijst met bestanden zien. Als we het gebruiken zonder argumenten dan ziet dat er ongeveer uit als in figuur \ref{fig:lsDir}
 \begin{figure}[h]
 \includegraphics[width=0.9\linewidth]{linuxreader-img023.png}
-\label{fig:lsDir}
 	\caption{Directory listing}
+\label{fig:lsDir}
 \end{figure}
 
 Opties worden van argumenten onderscheiden doordat opties beginnen met een min-teken (-). Geven we aan ls een optie me, bijvoorbeeld -r voor reverse, of wel sorteer omgekeerd dan zien we wat we in figuur \ref{fig:lsRevDir} zien.
 \begin{figure}
 \includegraphics[width=0.9\linewidth]{linuxreader-img024.png}
-	\label{fig:lsRevDir}
 	\caption{Reverse order listing}
+	\label{fig:lsRevDir}
 \end{figure}
 We zien nu dat Videos vooraan staat en bin achteraan.
 
 We kunnen ook meerdere opties meegeven. De optie -l geeft een long list, ofwel een lijst die veel meer informatie per bestand of directory laat zien.
 \begin{figure}[h]
 \includegraphics[width=0.9\linewidth]{linuxreader-img025.png}
-	\label{fig:lslDir}
 	\caption{Reverse and long listing}
+	\label{fig:lslDir}
 \end{figure}
 Je mag de opties apart meegeven zoals we in figuur \ref{fig:lslDir} gedaan hebben maar je mag ze ook samenvoegen zoals:
 \begin{lstlisting}[language=bash]
