@@ -1,4 +1,4 @@
-\documentclass[a4paper,12pt,twoside,openright,titlepage]{book}
+\documentclass[a4paper,12pt,twoside,openright,titlepage]{article}
 
 %Additional packages
 \input{styles/packages}
@@ -16,46 +16,42 @@
 % Define document
 \author{D. Leeuw}
 \title{Linux Debian Installatie}
-\date{\today\\v.0.2.0}
+\date{\today\\
+0.5.0\\
+\vfill
+\raggedright
+\copyright\ 2020-2025 Dennis Leeuw\\
+\input{styles/licentie-titlepage}}
 
 \begin{document}
 \selectlanguage{dutch}
 
 \maketitle
 
-\copyright\ 2021-2025 Dennis Leeuw\\
-
-\input{styles/licentie}
-
 %%%%%%%%%%%%%%%%%%%
 %%% Introductie %%%
 %%%%%%%%%%%%%%%%%%%
 
-\frontmatter
-\chapter{Over dit Document}
+%\section{Over dit Document}
 %\input{src/OverDitDocument}
 %\input{src/DocChanges_Server}
 
 %%%%%%%%%%%%%%%%%
 %%% De inhoud %%%
 %%%%%%%%%%%%%%%%%
-\tableofcontents
 
-\mainmatter
-
-\chapter{Voorbereidingen}
-\section{Download ISO}
+\section{Voorbereidingen}
+\subsection{Download ISO}
 \input{src/debian_iso}
-\section{Maak een VM}
+\subsection{Maak een VM}
 \input{src/debian_vm}
 
-\chapter{Debian installatie}
+\section{Debian installatie}
 \input{src/debian_install.tex}
 
 %%%%%%%%%%%%%%%%%%%%%
 %%% Index and End %%%
 %%%%%%%%%%%%%%%%%%%%%
-%\backmatter
 \printindex
 \end{document}
 
