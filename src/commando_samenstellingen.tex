@@ -1,4 +1,9 @@
-Met het indrukken van de Enter-toets geef je aan dat je klaar bent met het invoeren van het commando en dat de shell de gegeven opdracht moet gaan uitvoeren. Officieel hoort er na een commando een ; te komen om aan te geven dat het commando klaar is. Na een ; kan er dan nog een commando komen:
+Met het indrukken van de Enter-toets geef je aan dat je klaar bent met het invoeren van het commando en dat de shell de gegeven opdracht moet gaan uitvoeren. Officieel hoort er na een commando een ; te komen om aan te geven dat het commando klaar is. Na een ; kan er dan nog een commando komen. Om met deze oefening aan de slag te gaan moeten we eerst een extra packet installeren:
+\begin{lstlisting}[language=bash]
+$ sudo apt-get install ncal
+\end{lstlisting}
+Nu het \texttt{ncal} packet ge\"installeerd is, heb je de beschikking over het \texttt{cal} commando.
+
 \begin{lstlisting}[language=bash]
 $ cal 10 2019;
 $ cal 10 2019; cal 10 2020
@@ -16,3 +21,4 @@ Het omgekeerde is ook mogelijk, namelijk dat we een commando uitvoeren als een v
 cal 10 2019 || cal 10 2020
 cal 13 2019 || cal 10 2020
 \end{lstlisting}
+
