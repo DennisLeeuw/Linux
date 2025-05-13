@@ -1,4 +1,4 @@
-\documentclass[a4paper,12pt,twoside,openright,titlepage]{book}
+\documentclass[a4paper,12pt,twoside,openright,titlepage]{article}
 
 %Additional packages
 \input{styles/packages}
@@ -18,7 +18,7 @@
 % Define document
 \author{D. Leeuw}
 \title{Linux: Systeemdocumentatie}
-\date{\today\\v.1.0.0}
+\date{\today\\v.1.1.0}
 
 \begin{document}
 \selectlanguage{dutch}
@@ -33,42 +33,42 @@
 %%% Introductie %%%
 %%%%%%%%%%%%%%%%%%%
 
-\frontmatter
-\chapter{Over dit Document}
-\section{Leerdoelen}
+%B% \frontmatter
+\section{Over dit Document}
+\subsection{Leerdoelen}
 \input{src/leerdoelen_cli_documentatie}
-\section{Voorkennis}
+\subsection{Voorkennis}
 \input{src/voorkennis_cli_documentatie}
 
 %%%%%%%%%%%%%%%%%
 %%% De inhoud %%%
 %%%%%%%%%%%%%%%%%
-\tableofcontents
+%%% \tableofcontents
 
-\mainmatter
+%B% \mainmatter
 % Requires: shell
 % Provides: man, locate, info, apropos, whatis
-\chapter{Linux documentatie}
+\section{Linux documentatie}
 \input{src/DocIntro}
-\chapter{man-pages}
+\section{man-pages}
 \input{src/DocMan}
-\chapter{Welk commando moet ik hebben?}
+\section{Welk commando moet ik hebben?}
 \input{src/DocVinden}
-\chapter{De opties -h en -{}-help}
+\section{De opties -h en -{}-help}
 \input{src/DocHelp}
-\chapter{Info}
+\section{Info}
 \input{src/DocInfo}
-\chapter{/usr/share/doc}
+\section{/usr/share/doc}
 \input{src/DocShareDoc}
-\chapter{Internet}
+\section{Internet}
 \input{src/DocInternet}
-\chapter{Opdrachten}
+\section{Opdrachten}
 \input{src/vragen-documentatie}
 
 %%%%%%%%%%%%%%%%%%%%%
 %%% Index and End %%%
 %%%%%%%%%%%%%%%%%%%%%
-\backmatter
+%B% \backmatter
 \printindex
 \end{document}
 
