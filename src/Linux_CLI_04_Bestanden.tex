@@ -1,4 +1,4 @@
-\documentclass[a4paper,12pt,twoside,openright,titlepage]{book}
+\documentclass[a4paper,12pt,twoside,openright,titlepage]{article}
 
 %Additional packages
 \input{styles/packages}
@@ -18,51 +18,47 @@
 % Define document
 \author{D. Leeuw}
 \title{Linux: Werken met bestanden op de CLI}
-\date{\today\\v.0.9.5}
+\date{\today\\v.0.9.5\\
+\vfill
+\raggedright
+\copyright\ 2020-2025 Dennis Leeuw\\
+\input{styles/licentie-titlepage}}
+
 
 \begin{document}
 \selectlanguage{dutch}
 
 \maketitle
 
-\copyright\ 2020-2025 Dennis Leeuw\\
-
-\input{styles/licentie}
-
 %%%%%%%%%%%%%%%%%%%
 %%% Introductie %%%
 %%%%%%%%%%%%%%%%%%%
 
-\frontmatter
-\chapter{Over dit Document}
-\section{Leerdoelen}
+\section{Over dit Document}
+\subsection{Leerdoelen}
 \input{src/leerdoelen_cli_bestanden}
-\section{Voorkennis}
+\subsection{Voorkennis}
 \input{src/voorkennis_cli_bestanden}
 
 %%%%%%%%%%%%%%%%%
 %%% De inhoud %%%
 %%%%%%%%%%%%%%%%%
-\tableofcontents
-
-\mainmatter
 
 % Requires: fhs
 % Provides: touch, cat, mkdir, rmdir, rm, redirects: >, >>, <, <<
-\chapter{Werken met bestanden}
+\section{Werken met bestanden}
 \input{src/Bestanden}
-\section{Directories}
+\subsection{Directories}
 \input{src/Directories}
 \input{src/directories-cd}
-\chapter{Bestanden maken en stdin, stdout en stderr}
+\section{Bestanden maken en stdin, stdout en stderr}
 \input{src/BestandenMaken}
-\chapter{Bestanden kopie\"eren, verplaatsen, hernoemen, verwijderen}
+\section{Bestanden kopie\"eren, verplaatsen, hernoemen, verwijderen}
 \input{src/Bestanden_verplaatsen}
 
 %%%%%%%%%%%%%%%%%%%%%
 %%% Index and End %%%
 %%%%%%%%%%%%%%%%%%%%%
-\backmatter
 \printindex
 \end{document}
 
