@@ -1,4 +1,4 @@
-\documentclass[a4paper,12pt,twoside,openright,titlepage]{book}
+\documentclass[a4paper,12pt,twoside,openright,titlepage]{article}
 
 %Additional packages
 \input{styles/packages}
@@ -18,79 +18,74 @@
 % Define document
 \author{D. Leeuw}
 \title{Linux: Introductie tot de Command Line Interface}
-\date{\today\\v.1.0.0}
+\date{\today\\
+\vfill
+\raggedright
+\copyright\ 2020-2025 Dennis Leeuw\\
+\input{styles/licentie-titlepage}}
 
 \begin{document}
 \selectlanguage{dutch}
 
 \maketitle
 
-\copyright\ 2020-2025 Dennis Leeuw\\
-
-\input{styles/licentie}
-
 %%%%%%%%%%%%%%%%%%%
 %%% Introductie %%%
 %%%%%%%%%%%%%%%%%%%
 
-\frontmatter
-\chapter{Over dit Document}
-\section{Leerdoelen}
+\section{Over dit Document}
+\subsection{Leerdoelen}
 \input{src/leerdoelen_cli_waarom_cli}
-\section{Voorkennis}
+\subsection{Voorkennis}
 \input{src/voorkennis_cli_waarom_cli}
-%\input{src/OverDitDocument}
-%\input{src/DocChanges_CLI}
 
 %%%%%%%%%%%%%%%%%
 %%% De inhoud %%%
 %%%%%%%%%%%%%%%%%
-\tableofcontents
+%%% \tableofcontents
 
-\mainmatter
 
 % Requires: GUI, DASH
 % Provides: ls, pwd, whoami, hostname, history, mkdir, cd, rmdir, ~
 % PATH, HOME, USER
-\chapter{Waarom de commandline interface?}
+\section{Waarom de commandline interface?}
 \input{src/WaaromDeCLI}
-\chapter{Toegang tot de CLI}
+\section{Toegang tot de CLI}
 \input{src/CLIToegang}
-\chapter{De shell}
+\section{De shell}
 \input{src/CLIShell}
-\section{De prompt}
+\subsection{De prompt}
 \input{src/CLIPrompt}
-\section{De home-directory}
+\subsection{De home-directory}
 \input{src/HomeDirectory}
-\section{History}
+\subsection{History}
 \input{src/CLIHistory}
-\section{Shell variabelen}
+\subsection{Shell variabelen}
 \input{src/VariabelenShell}
-\section{Eigen variabelen}
+\subsection{Eigen variabelen}
 \input{src/VariabelenEigen}
-\section{Shell Quotes en Escapes}
+\subsection{Shell Quotes en Escapes}
 \input{src/quotesescapes}
-\subsection{Escapes}
+\subsubsection{Escapes}
 \input{src/escapes}
-\subsection{Quotes}
+\subsubsection{Quotes}
 \input{src/quotes}
-\chapter{Het bestandssysteem}
+\section{Het bestandssysteem}
 \input{src/FHS}
-\section{Everything is a file}
+\subsection{Everything is a file}
 \input{src/EverythingIsAFile}
-\subsection{Bestandstypen}
+\subsubsection{Bestandstypen}
 \input{src/bestandstypen}
-\chapter{Vragen en opdrachten}
-\section{Over de shell}
+\section{Vragen en opdrachten}
+\subsection{Over de shell}
 \input{src/vragen-shell}
-\section{Over het bestandssysteem}
+\subsection{Over het bestandssysteem}
 \input{src/vragen-fhs}
-
 
 %%%%%%%%%%%%%%%%%%%%%
 %%% Index and End %%%
 %%%%%%%%%%%%%%%%%%%%%
-\backmatter
+%B% \backmatter
 \printindex
 \end{document}
 
