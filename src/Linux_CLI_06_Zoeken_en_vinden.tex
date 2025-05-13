@@ -1,4 +1,4 @@
-\documentclass[a4paper,12pt,twoside,openright,titlepage]{book}
+\documentclass[a4paper,12pt,twoside,openright,titlepage]{article}
 
 %Additional packages
 \input{styles/packages}
@@ -18,60 +18,54 @@
 % Define document
 \author{D. Leeuw}
 \title{Linux CLI: Zoeken en vinden}
-\date{\today\\v.1.0.0}
+\date{\today\\
+1.0.0\\
+\vfill
+\raggedright
+\copyright\ 2020-2025 Dennis Leeuw\\
+\input{styles/licentie-titlepage}}
 
 \begin{document}
 \selectlanguage{dutch}
 
 \maketitle
 
-\copyright\ 2020-2025 Dennis Leeuw\\
-
-\input{styles/licentie}
-
 %%%%%%%%%%%%%%%%%%%
 %%% Introductie %%%
 %%%%%%%%%%%%%%%%%%%
 
-\frontmatter
-\chapter{Over dit Document}
-\section{Leerdoelen}
+\section{Over dit Document}
+\subsection{Leerdoelen}
 \input{src/leerdoelen_cli_zoeken_en_vinden}
-\section{Voorkennis}
+\subsection{Voorkennis}
 \input{src/voorkennis_cli_zoeken_en_vinden}
-%\input{src/OverDitDocument}
-%\input{src/DocChanges_CLI}
 
 %%%%%%%%%%%%%%%%%
 %%% De inhoud %%%
 %%%%%%%%%%%%%%%%%
-\tableofcontents
-
-\mainmatter
 
 % Requires: editor, quoting, documentatie
 % Provides: grep, find, globbing, regular expressions, sed
-\chapter{Zoeken en vinden}\label{zoekenenvinden}
+\section{Zoeken en vinden}\label{zoekenenvinden}
 \input{src/ZoekenVindenIntro}
-\chapter{Zoeken naar bestanden}
-\section{Globbing}
+\section{Zoeken naar bestanden}
+\subsection{Globbing}
 \input{src/Globbing}
-\section{find}
+\subsection{find}
 \input{src/find}
 \input{src/ZoekenNaarBestanden}
-\chapter{Zoeken in bestanden}
+\section{Zoeken in bestanden}
 \input{src/ZoekenInBestanden}
-\section{grep}
+\subsection{grep}
 \input{src/grep}
-\section{Regular Expressions}
+\subsection{Regular Expressions}
 \input{src/regex}
-\section{Zoek en vervang}
+\subsection{Zoek en vervang}
 \input{src/sed}
 
 %%%%%%%%%%%%%%%%%%%%%
 %%% Index and End %%%
 %%%%%%%%%%%%%%%%%%%%%
-\backmatter
 \printindex
 \end{document}
 
