@@ -1,4 +1,4 @@
-\documentclass[a4paper,12pt,twoside,openright,titlepage]{book}
+\documentclass[a4paper,12pt,twoside,openright,titlepage]{article}
 
 %Additional packages
 \input{styles/packages}
@@ -18,60 +18,55 @@
 % Define document
 \author{D. Leeuw}
 \title{Linux: Editors en Vim}
-\date{\today\\v.1.0.0}
+\date{\today\\
+1.0.0\\
+\vfill
+\raggedright
+\copyright\ 2020-2025 Dennis Leeuw\\
+\input{styles/licentie-titlepage}}
+
 
 \begin{document}
 \selectlanguage{dutch}
 
 \maketitle
 
-\copyright\ 2020-2025 Dennis Leeuw\\
-
-\input{styles/licentie}
-
 %%%%%%%%%%%%%%%%%%%
 %%% Introductie %%%
 %%%%%%%%%%%%%%%%%%%
 
-\frontmatter
-\chapter{Over dit Document}
-\section{Leerdoelen}
+\section{Over dit Document}
+\subsection{Leerdoelen}
 \input{src/leerdoelen_cli_editors}
-\section{Voorkennis}
+\subsection{Voorkennis}
 \input{src/voorkennis_cli_editors}
-%\input{src/OverDitDocument}
-%\input{src/DocChanges_CLI}
 
 %%%%%%%%%%%%%%%%%
 %%% De inhoud %%%
 %%%%%%%%%%%%%%%%%
-\tableofcontents
-
-\mainmatter
 
 % Requires: fhs
 % Provides: vi, vim, nano, pico
-\chapter{Het gebruik van een editor}
+\section{Het gebruik van een editor}
 \input{src/editor}
-\section{vi, pico, nano}
+\subsection{vi, pico, nano}
 \input{src/editors}
-\chapter{vim}
+\section{vim}
 \input{src/vimIntro}
-\section{vim opstarten}
+\subsection{vim opstarten}
 \input{src/vimOpstarten}
-\section{Text invoer}
+\subsection{Text invoer}
 \input{src/vimTextInvoer}
-\section{Text delete}
+\subsection{Text delete}
 \input{src/vimDelete}
-\section{Knippen en plakken}
+\subsection{Knippen en plakken}
 \input{src/vimKnippenPlakken}
-\section{Bewegen door een tekstbestand}
+\subsection{Bewegen door een tekstbestand}
 \input{src/vimBewegen}
 
 %%%%%%%%%%%%%%%%%%%%%
 %%% Index and End %%%
 %%%%%%%%%%%%%%%%%%%%%
-\backmatter
 \printindex
 \end{document}
 
