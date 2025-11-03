@@ -14,9 +14,9 @@ $ cat hello.txt
 
 dan zal je zien dat er weer niets op je scherm verschijnt. En dat is goed! Het \texttt{cat}\index{cat} commando plaatst de inhoud van een bestand op het scherm en daar we een leeg bestand hebben opgevraagd is wat er op het scherm komt dus niets en omdat dat succesvol is verlopen hoeft \texttt{cat} ook geen foutmelding te laten zien en met de wetenschap dat geen nieuws, goed nieuws is is \texttt{cat} klaar.
 
-In een vorig hoofdstuk hebben we met \texttt{echo} tekst naar het scherm geschreven en nu hebben we met \texttt{cat} een bestand op het scherm afgebeeld. Vanuit Linux gezien is dat niet helemaal correct geformuleerd. Zowel \texttt{echo} als \texttt{cat} schrijven naar de \textquote{standaard output}\index{stanaard output} en in de terminal is het scherm de standaard output. De standaard output wordt vaak afgekort als stdout\index{stdout}.
+In een vorig hoofdstuk hebben we met \texttt{echo} tekst naar het scherm geschreven en nu hebben we met \texttt{cat} een bestand op het scherm afgebeeld. Vanuit Linux gezien is dat niet helemaal correct geformuleerd. Zowel \texttt{echo} als \texttt{cat} schrijven naar de \textquote{standaard output}\index{stanaard output} en in de terminal is het scherm de standaard output. De standaard output wordt afgekort als stdout\index{stdout}.
 
-We kunnen de standaard output ook omleiden\index{omleiden!stdout}\index{stdout!omleiden} (redirect\index{redirect!stdout}\index{stdout!redirect}) naar bijvoorbeeld een bestand:
+We kunnen de stdout ook omleiden\index{omleiden!stdout}\index{stdout!omleiden} (redirect\index{redirect!stdout}\index{stdout!redirect}) naar bijvoorbeeld een bestand:
 
 \begin{lstlisting}[language=bash]
 $ echo 'Ik werk met Linux' > hello.txt
