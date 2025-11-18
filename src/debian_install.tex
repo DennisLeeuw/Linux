@@ -23,7 +23,7 @@
 
 \item Nu moeten we een root wachtwoord kiezen. Het is verstandig om een sterk wachtwoord te kiezen, omdat de root gebruiker alles mag.
 
-\item Ook voor de gebruiker is dat een goed plan. Gebruik een password manager om een wachtwoord te generen of om je gekozen wachtwoorden erin op te slaan.
+\item Ook voor de gebruiker is het een goed plan om een sterk wachtwoord te kiezen. Gebruik een password manager om een wachtwoord te generen of om je gekozen wachtwoorden erin op te slaan.
 
 \item We houden de harddisk indeling simpel, dus kiezen we \textquote{Guided - Use entire disk} als onze optie voor de harddisk indeling zoals aangegeven in \ref{DebDiskPart}.
 
@@ -34,7 +34,11 @@
 	\label{DebDiskPart}
 \end{figure}
 
-\item We kiezen de enige harddisk die er is en kiezen voor All files in one partition. In het overzicht dat we te zien krijgen zien we dat er naast een bestandssysteem ook een swap-partitie aangemaakt is zoals weergeven in figuur \ref{DebDiskParts}.
+\item We kiezen de enige harddisk die er is (/dev/sda)
+
+\item daarna kiezen voor All files in one partition.
+
+\item In het overzicht dat we te zien krijgen zien we dat er naast een bestandssysteem ook een swap-partitie aangemaakt is zoals weergeven in figuur \ref{DebDiskParts}.
 
 \begin{figure}[H]
 	\centering
@@ -47,9 +51,13 @@
 
 \item Na de installatie van het base system (een minimaal systeem), krijgen we de vraag of we nog meer software van andere CD's willen installeren. Dat willen we niet.
 
-\item Debian gaat nu opzoek naar updates en additionele software die ge\"installeerd kan worden. De repo's van Debian staan over de wereld verspreid, om geen data op te halen van bijvoorbeeld servers in de Verenigde Staten, maar alleen van servers in Nederland, zodat de belasting van het Internet alleen lokaal is, moeten we een keuze maken vanaf welke servers wij onze software willen ophalen. Kies Netherlands en deb.debian.org. We gebruiken geen proxy dus bij die vraag mag je continue geven.
+\item Debian gaat nu opzoek naar updates en additionele software die ge\"installeerd kan worden. De repo's van Debian staan over de wereld verspreid, om geen data op te halen van bijvoorbeeld servers in de Verenigde Staten, maar alleen van servers in Nederland moeten we een keuze maken vanaf welke servers wij onze software willen ophalen. Kies Netherlands.
 
-\item Debian gaat nu de databases ophalen van alle software die er voor Debian beschikbaar is en gaat daarna meteen je systeem updaten met de laatst beschikbare versies. Afhankelijk van hoe nieuw de ISO was waarvan je hebt geboot kan dit even duren. Je kan af en toe een vraag krijgen van de installer, lees de tekst dan goed door en bepaal of je het wel of niet wilt wat er gevraagd wordt, of vraag je docent.
+\item Selecteer daarna deb.debian.org.
+
+\item We gebruiken geen proxy dus bij die vraag mag je continue geven.
+
+\item Debian gaat nu de databases ophalen van alle software die er voor Debian beschikbaar is en gaat daarna meteen je systeem updaten met de laatst beschikbare versies. Afhankelijk van hoe nieuw de ISO was waarvan je hebt geboot kan dit even duren. Je kan af en toe een vraag krijgen van de installer, lees de tekst dan goed door en bepaal of je het wel of niet wilt wat er gevraagd wordt, of vraag je docent!
 
 \item Als de update klaar is krijg je de keuze om nog extra software te installeren (zie \ref{DebSoft}).
 
@@ -92,7 +100,7 @@ We loggen uit:
 # exit
 \end{lstlisting}
 
-We loggen nu in als een gewone gebruiker. Nadat je ingelogd bent type je op de prompt:
+We loggen nu in als een gewone gebruikeri, de gebruiker die je aangemaakt hebt bij de installatie. Nadat je ingelogd bent type je op de prompt:
 \begin{lstlisting}[language=bash]
 $ sudo shutdown -h now
 \end{lstlisting}
