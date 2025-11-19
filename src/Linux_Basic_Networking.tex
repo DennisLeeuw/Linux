@@ -1,0 +1,86 @@
+\documentclass[a4paper,12pt,twoside,openright,titlepage]{book}
+
+%Additional packages
+\input{styles/packages}
+
+% Listing style
+\input{styles/lstset}
+
+% Uncomment for production
+% \syntaxonly
+
+% Style
+\pagestyle{headings}
+
+% Define document
+\author{D. Leeuw}
+\title{Linux Basic Networking}
+\date{\today\\v.0.7.0}
+
+\begin{document}
+\selectlanguage{dutch}
+
+\maketitle
+
+\copyright\ 2025 Dennis Leeuw\\
+
+\input{styles/licentie}
+
+%%%%%%%%%%%%%%%%%%%
+%%% Introductie %%%
+%%%%%%%%%%%%%%%%%%%
+
+\frontmatter
+\chapter{Over dit Document}
+\subsection{Leerdoelen}
+\input{src/leerdoelen_cli_configuratie}
+\subsection{Voorkennis}
+\input{src/voorkennis_cli_configuratie}
+
+
+%%%%%%%%%%%%%%%%%
+%%% De inhoud %%%
+%%%%%%%%%%%%%%%%%
+\tableofcontents
+
+\mainmatter
+
+% requires: ls
+% provides: NetworkManager, ip
+
+\chapter{Introductie}
+\input{src/linux_network-intro}
+
+\chapter{Netwerk settings bekijken}
+\section{TCP/IP met ip}
+\input{src/linux_tcpip-ip.tex}
+\section{De DNS servers}
+\input{src/linux_tcpip-resolv-conf.tex}
+\section{De host naam}
+\input{src/linux-hostname.tex}
+
+\chapter{Netwerk settings veranderen}
+\input{src/linux_NetworkManager}
+\section{NetworkManager: Devices}
+\input{src/linux_NetworkManager-devices}
+\section{NetworkManager: Ethernet}
+% Iets over Ethernet: /etc/ethertypes
+\input{src/linux_NetworkManager-ethernet}
+\section{NetworkManager: WiFi}
+\input{src/linux_NetworkManager-wifi}
+\section{NetworkManager: IPv4}
+\input{src/linux_NetworkManager-ipv4}
+
+% Iets over TCP/IP: /etc/protocols, /etc/services
+
+% Iets over firewalling: /etc/hosts.allow, /etc/hosts.deny
+
+
+%%%%%%%%%%%%%%%%%%%%%
+%%% Index and End %%%
+%%%%%%%%%%%%%%%%%%%%%
+%\backmatter
+\printindex
+\end{document}
+
+%%% Last line %%%
