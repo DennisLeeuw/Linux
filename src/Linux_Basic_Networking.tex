@@ -15,7 +15,7 @@
 % Define document
 \author{D. Leeuw}
 \title{Linux Basic Networking}
-\date{\today\\v.0.10.0}
+\date{\today\\v.1.0.0}
 
 \begin{document}
 \selectlanguage{dutch}
@@ -55,6 +55,8 @@
 
 \section{TCP/IP: ip-adressen}
 \input{src/linux_tcpip-ip.tex}
+\subsection{Testen van IP verbindingen}
+\input{src/linux_tcpip-ip-ping.tex}
 
 \section{TCP/IP: Services}
 \subsection{protocols en services}
@@ -75,19 +77,26 @@
 \input{src/linux_tcpip-host.tex}
 
 \chapter{Netwerk settings veranderen}
+\input{src/linux_network-settings}
+
+\section{NetworkManager}
 \input{src/linux_NetworkManager}
-\section{NetworkManager: Devices}
+\subsection{NetworkManager: Devices}
 \input{src/linux_NetworkManager-devices}
-\section{NetworkManager: Ethernet}
+\subsection{NetworkManager: Ethernet}
 % Iets over Ethernet: /etc/ethertypes
 \input{src/linux_NetworkManager-ethernet}
-\section{NetworkManager: WiFi}
+\subsection{NetworkManager: WiFi}
 \input{src/linux_NetworkManager-wifi}
-\section{NetworkManager: IPv4}
+\subsection{NetworkManager: IPv4}
 \input{src/linux_NetworkManager-ipv4}
 
-% Iets over firewalling: /etc/hosts.allow, /etc/hosts.deny
-
+\section{Debian: network configuration files}
+\input{src/debian_network}
+\subsection{Ethernet interfaces}
+\input{src/debian_network_devices}
+\subsection{Nameservers}
+\input{src/debian_network_nameservers}
 
 %%%%%%%%%%%%%%%%%%%%%
 %%% Index and End %%%
