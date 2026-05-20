@@ -1,3 +1,6 @@
+## Deze repository is verplaatst naar OperatingSystems, daar vindt de verdere ontwikkeling plaats
+
+
 # Linux
 Dit project heeft als doel om een compleet open source boek te maken over Linux voor het MBO en voor het examen van LPI Linux Essentials.
 
